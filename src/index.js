@@ -3,8 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   console.table(gifts)
   //Hello Meghan
 
+  const giftLists = gifts.forEach(function(element){
+    console.log(element.name)
+    console.log(element.image)
+  });
+
+
   const form = document.querySelector('.ui.icon.input')
-  form.addEventListener('text', function (event) {
+  form.addEventListener('submit', function (event) {
     event.preventDefault()
   console.log(event.target)
   const input = document.querySelector('#filter-input').value
